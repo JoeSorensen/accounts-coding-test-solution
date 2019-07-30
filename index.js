@@ -30,7 +30,7 @@ const vm = new Vue({
         await axios
             .get("https://frontiercodingtests.azurewebsites.net/api/accounts/getall")
             .then(returned => (response = returned));
-        //For debug purpose
+        //For debug purposes
         console.log(response.status);
         fromData = response.data;
         //Sorts users by account status code
