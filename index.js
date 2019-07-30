@@ -10,7 +10,20 @@ const vm = new Vue({
     },
     filters: {
         asPrice (value) {
-            return ("$" + (value.toString()))
+            return ("$" + (value.toString()) + " USD")
+        },
+        asPhoneNumber(value) {
+            const cleaned = ('' + value).replace(/\D/g, '');
+            const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+            if (match) {
+                return '(' + match[1] + ')-' + match[2] + '-' + match[3]
+            }
+            return null
+        },
+        asDate(value) {
+            const options = {year: 'numeric', month: '2-digit', day: 'numeric' };
+            const result = new Date(value);
+            return ("(" + result.toLocaleDateString("en-us", options) + ")")
         }
     },
     mounted: async function() {

@@ -29,9 +29,9 @@
               <ul class="account-data-list">
                 <li><label>Name:</label>{{user.LastName}}, {{user.FirstName}}</li>
                 <li><label>Email:</label>{{user.Email}}</li>
-                <li><label>Phone Number:</label>{{user.PhoneNumber}}</li>
+                <li><label>Phone Number:</label>{{user.PhoneNumber | asPhoneNumber}}</li>
                 <li><label>Amount Due:</label>{{user.AmountDue | asPrice}}</li>
-                <li><label>Due Date:</label>{{user.DueDate}}</li>
+                <li><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
               </ul>
             </div>     
           </section>
@@ -45,9 +45,9 @@
               <ul class="account-data-list">
                 <li><label>Name:</label>{{user.LastName}}, {{user.FirstName}}</li>
                 <li><label>Email:</label>{{user.Email}}</li>
-                <li><label>Phone Number:</label>{{user.PhoneNumber}}</li>
+                <li><label>Phone Number:</label>{{user.PhoneNumber | asPhoneNumber}}</li>
                 <li><label>Amount Due:</label>{{user.AmountDue | asPrice}}</li>
-                <li><label>Due Date:</label>{{user.DueDate}}</li>
+                <li><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
               </ul>
             </div>
           </section>
@@ -61,9 +61,9 @@
               <ul class="account-data-list">
                 <li><label>Name:</label>{{user.LastName}}, {{user.FirstName}}</li>
                 <li><label>Email:</label>{{user.Email}}</li>
-                <li><label>Phone Number:</label>{{user.PhoneNumber}}</li>
+                <li><label>Phone Number:</label>{{user.PhoneNumber | asPhoneNumber}}</li>
                 <li><label>Amount Due:</label>{{user.AmountDue | asPrice}}</li>
-                <li><label>Due Date:</label>{{user.DueDate}}</li>
+                <li v-if="user.PaymentDueDate != null"><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
               </ul>
             </div>
           </div>
