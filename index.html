@@ -17,7 +17,8 @@
       </header>
       <main class="content grid" id="home-content">
         <div class="content-title-container">
-          <h2>Accounts</h2>
+          <h2 v-if="fromData == null">Loading...</h2>
+          <h2 v-if="fromData != null">Accounts</h2>
         </div>
         <section class="grid" id="account-grid">
           <section class="account-column grid" id="active-account-column">
