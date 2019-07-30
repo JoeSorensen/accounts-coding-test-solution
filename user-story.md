@@ -31,9 +31,7 @@ A template for the view has been provided, this template can be modified to fit 
 
 ## Known  Issues
 
-### Template
-
-- Content overflows from lists into footer causes list content to render underneath the footer rather than pushing the footer down.
+- Current solution for list overflow does not work correctly at this time
 - Three column layout causes issues on mobile.
 
 ## Acceptance Criteria
