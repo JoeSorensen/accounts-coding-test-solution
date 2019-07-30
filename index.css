@@ -43,6 +43,7 @@ footer {
 }
 .grid {
     display: grid;
+    max-height: 1000px;
     overflow: auto;
 }
 .title-container {
