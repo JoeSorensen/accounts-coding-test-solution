@@ -32,7 +32,7 @@
                 <li><label>Email:</label>{{user.Email}}</li>
                 <li><label>Phone Number:</label>{{user.PhoneNumber | asPhoneNumber}}</li>
                 <li><label>Amount Due:</label>{{user.AmountDue | asPrice}}</li>
-                <li><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
+                <li v-if="user.PaymentDueDate != null"><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
               </ul>
             </div>     
           </section>
@@ -48,7 +48,7 @@
                 <li><label>Email:</label>{{user.Email}}</li>
                 <li><label>Phone Number:</label>{{user.PhoneNumber | asPhoneNumber}}</li>
                 <li><label>Amount Due:</label>{{user.AmountDue | asPrice}}</li>
-                <li><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
+                <li v-if="user.PaymentDueDate != null"><label>Due Date:</label>{{user.PaymentDueDate | asDate}}</li>
               </ul>
             </div>
           </section>
