@@ -43,6 +43,7 @@ footer {
 }
 .grid {
     display: grid;
+    overflow: auto;
 }
 .title-container {
     grid-column-start: 2;
