@@ -10,6 +10,7 @@ const vm = new Vue({
     },
     filters: {
         asPrice (value) {
+            value.toFixed(2);
             return ("$" + (value.toString()) + " USD")
         },
         asPhoneNumber(value) {
