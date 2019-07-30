@@ -40,6 +40,7 @@ footer {
     color: #fff;
     grid-template-columns: 1% 98% 1%;
     grid-template-rows: 5% 90% 5%;
+    bottom: 10px
 }
 .grid {
     display: grid;
